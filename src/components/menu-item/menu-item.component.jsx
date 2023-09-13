@@ -1,9 +1,18 @@
 import React from 'react';
 
-import { withRouter } from 'react-router-dom'
+import { useNavigate } from 'react-router';
 import './menu-item.styles.scss';
 
-const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
+export const withRouter = (Component) =>{
+  const Wrapper = (props) =>{
+      const history = useNavigate();
+      return <Component history={history} {...props}/>
+  } 
+  return Wrapper;
+}
+
+
+const MenuItem = ({ title, imageUrl, size, history, linkUrl,match }) => (
   <div
     className={`${size} menu-item`}
     onClick={() => history.push(`${match.url}${linkUrl}`)}
@@ -21,4 +30,8 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
   </div>
 );
 
-export default withRouter(MenuItem);
+export default withRouter(MenuItem)
+
+
+
+
