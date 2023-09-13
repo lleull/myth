@@ -13,7 +13,7 @@
     cursor: pointer;
 
     & .background-image {
-      transform: scale(2.1);
+      transform: scale(1.5);
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       background-color: rgba(50, 66, 40, 0.877);
       background-blend-mode: screen;
@@ -25,7 +25,7 @@
       background-color: rgb(243, 243, 243);
       color: rgb(3, 1, 1);
       transform: scale3d(20);
-      border-radius: 10px 40px;
+      
       border-bottom: 5px solid black;
       border-top: none;
     }
