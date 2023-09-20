@@ -1,19 +1,34 @@
 import React from "react";
 import CustomButton from "../components/button-component/button-componet";
+import CartItem from "../components/cart-item-components/cart.item.components";
 import "./cart.dropdown.styles.scss"
-
-import ToggleCardHidden from "../redux/Cart/cart.action";
-
+import { connect } from "react-redux";
 
 
-const CartDropDown = () => (
-    <div className="cart-dropdown" onClick={ToggleCardHidden}>
-         <h1>Ordered</h1>
-        <div className="cart-items" />
-       
+
+
+const CartDropDown = ({cartItems}) => (
+    <div className="cart-dropdown" >
+    
+        <div className="cart-items" >
+            {
+            
+              cartItems.map(cartItem => (
+                <CartItem key={cartItem.id} item={cartItem}/>
+              ))
+            
+            }
+            
+            </div>
+    
         <CustomButton>Go Checkout</CustomButton>
     </div>
 )
 
+const mapToDispatchProps = ({cart: { cartItems } }) => ({
+cartItems
 
-export default  CartDropDown;
+})
+
+
+export default  connect(mapToDispatchProps)(CartDropDown);

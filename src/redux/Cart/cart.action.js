@@ -1,8 +1,8 @@
 import { CardActionTypes } from "./cart.types";
 
- const ToggleCardHidden = () => ({
+export const ToggleCardHidden = () => ({
     type: CardActionTypes.TOOGLE_CART_HIDDEN
-})
+});
 
 
 export const addItem = item => ({
@@ -11,4 +11,4 @@ export const addItem = item => ({
 })
  
 
-export default ToggleCardHidden (addItem);
+export default ToggleCardHidden(addItem)
