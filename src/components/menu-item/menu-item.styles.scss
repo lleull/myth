@@ -14,20 +14,20 @@
     cursor: pointer;
 
     & .background-image {
-      transform: scale(1.5);
-      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-      background-color: rgba(50, 66, 40, 0.877);
-      background-blend-mode: screen;
+      transform: scale(1.2);
+      transition: transform 10s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      background-color: rgba(0, 0, 0, 0.493);
+      background-blend-mode: darken;
 
     }
 
     & .content {
       opacity: 0.9;
-      background-color: rgb(243, 243, 243);
-      color: rgb(255, 255, 255);
+      background-color: rgba(243, 243, 243, 0.342);
+      color: rgb(0, 0, 0);
       transform: scale3d(20);
       
-      border-bottom: 5px solid black;
+   
       border-top: none;
     }
   }
@@ -72,7 +72,8 @@
 
     .subtitle {
       font-weight: lighter;
-      font-size: 16px;
+      font-size: 20px;
+      color: #1b0e49;
     }
   }
 }
