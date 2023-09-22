@@ -7,3 +7,9 @@
   
 }
 
+
+@media (max-width:572px) {
+  body{
+    height: 100%;
+  }
+}
