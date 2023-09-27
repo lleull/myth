@@ -18,8 +18,8 @@ const Directory = ({sections}) => {
 }
 
 const mapToDispatchProps = createStructuredSelector({
-  Sections: selectSections
+  sections: selectSections
 })
 
  
-export default connect(null, mapToDispatchProps) (Directory);
+export default connect( mapToDispatchProps) (Directory);

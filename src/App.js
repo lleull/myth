@@ -56,7 +56,7 @@ componentDidMount() {
             <SignInAndSignUp />
             )}/>
             
-            <Route path='/checkout' Component={Checkout}/>
+            <Route exact path='/checkout' Component={Checkout}/>
            </Routes>
     
     </div>
