@@ -7,6 +7,7 @@ import CheckoutItem from "../checkout-items/checkout-items.component";
 import { withRouter } from "../components/menu-item/menu-item.component";
 
 
+
 const Checkout = ({CartItems, Total}) => {
   return (
     <div className="checkout-page">
@@ -48,6 +49,7 @@ const Checkout = ({CartItems, Total}) => {
 const mapStateToProps = createStructuredSelector ({
     CartItems: selectCartItems,
     Total: selectCardTotal
+  
 })
 
 
