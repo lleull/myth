@@ -7,7 +7,7 @@ import './directory.styles.scss';
 import selectSections from '../../redux/directory/directory.selector';
 
 
-const Directory = ({sections}) => {
+const Directory = ({sections}) => (
 
     <div className='directory-menu'>
       {sections.map(({ id, ...otherSectionProps }) => (
@@ -15,11 +15,11 @@ const Directory = ({sections}) => {
       ))}
       
     </div>
-}
+)
 
-const mapToDispatchProps = createStructuredSelector({
+const mapStateToProps = createStructuredSelector({
   sections: selectSections
 })
 
  
-export default connect( mapToDispatchProps) (Directory);
+export default connect( mapStateToProps) (Directory);

@@ -14,7 +14,6 @@ import { SelectCurrentUser } from './redux/user/user.selector';
 import { createStructuredSelector } from 'reselect';
 
 
-
 class  App extends React.Component {
  
       
@@ -47,9 +46,12 @@ componentDidMount() {
         
         <Header />
         <Routes>
-         
+           
             <Route  path='/' Component={Homepage}  />
-            <Route path='/shop' Component={Shop} />
+            <Route exact path='/shop' Component={Shop} /> 
+              
+            
+         
             <Route exact path='/signin' element={this.props.currentUser ? (
             <Navigate to='/' />
             ) : (

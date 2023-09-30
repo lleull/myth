@@ -12,7 +12,8 @@ export const withRouter = (Component) =>{
 }
 
 
-const MenuItem = ({ title, imageUrl, size, history, linkUrl,match }) => (
+const MenuItem = ({ title, imageUrl, size, history, linkUrl,match }) => {
+  return (
   <div
     className={`${size} menu-item`}
     onClick={() => history.push(`${match.url}${linkUrl}`)}
@@ -30,10 +31,10 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl,match }) => (
    
   </div>
    
+  )
+    };
 
-);
-
-export default withRouter(MenuItem)
+export default MenuItem;
 
 
 

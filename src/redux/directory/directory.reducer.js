@@ -40,7 +40,8 @@ const directoryReducer = (state = INITAIL_STATE, action) => {
     switch(action.type){
        default:
         return state; 
+        
     }
 }
 
-export default directoryReducer
+export default directoryReducer;
