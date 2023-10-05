@@ -6,10 +6,11 @@ import { selectCartItems, selectCardTotal } from "../redux/Cart/cart.selector";
 import CheckoutItem from "../checkout-items/checkout-items.component";
 import { withRouter } from "../components/menu-item/menu-item.component";
 
+import StripeCheckoutButton from "../assests/stripe/stripe-button.componenet";
 
 
-const Checkout = ({CartItems, Total}) => {
-  return (
+ const Checkout = ({CartItems, Total}) => (
+
     <div className="checkout-page">
       <div className="checkout-header">
         <div className="header-block">
@@ -42,9 +43,11 @@ const Checkout = ({CartItems, Total}) => {
 
         <span>TOTAL: ${Total}</span>
         </div>
+        <StripeCheckoutButton price={Total} />
     </div>
-  );
-};
+
+)
+
 
 const mapStateToProps = createStructuredSelector ({
     CartItems: selectCartItems,

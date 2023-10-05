@@ -7,12 +7,11 @@ import Shop from './components/Shop-page/shop.component';
 import Header from './components/header.component/header-component';
 import SignInAndSignUp from './components/sign-in and sign-up/sign-in and sign-up';
 import { auth, createUserProfileDocument} from './assests/firebase/firebase.utils';
-
 import setCurrentUser from './redux/user/user.action';
 import Checkout from './checkout page/checkout.cart.components';
 import { SelectCurrentUser } from './redux/user/user.selector';
 import { createStructuredSelector } from 'reselect';
-
+import Contact from './components/contact/contact';
 
 class  App extends React.Component {
  
@@ -41,27 +40,27 @@ componentDidMount() {
  
  render () {
     return (
-    
+    <>
     <div>
         
         <Header />
         <Routes>
-           
+        <Route  path='/contact' Component={Contact} />  
             <Route  path='/' Component={Homepage}  />
-            <Route exact path='/shop' Component={Shop} /> 
-              
-            
-         
+            <Route  path='/shop' Component={Shop} />
             <Route exact path='/signin' element={this.props.currentUser ? (
             <Navigate to='/' />
             ) : (
             <SignInAndSignUp />
             )}/>
             
-            <Route exact path='/checkout' Component={Checkout}/>
+            <Route  path='/checkout' Component={Checkout}/>
+           
            </Routes>
     
     </div>
+   
+    </>
     )
  }
 }

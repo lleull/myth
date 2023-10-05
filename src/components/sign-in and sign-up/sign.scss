@@ -1,5 +1,16 @@
-.sign {
-    padding: 10px 50px;
-    width: 40%;
+.all{
+    width: 100%;
+    height: 120vh;
     
+    .sign {
+    padding: 10px 0px;
+    width: 50%;
+    
+}
+.register{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 100vh;
+}
 }

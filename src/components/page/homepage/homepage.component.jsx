@@ -6,13 +6,15 @@ import MenuItem from "../../menu-item/menu-item.component";
 
 
 const Homepage = () => (
+ 
   <>
+  
     <div className="homepage">
      <Directory>
          <MenuItem />
        </Directory>
-    </div>
-    </>
+       </div>
+ </> 
 )
 
 export default Homepage;

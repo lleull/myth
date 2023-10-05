@@ -1,21 +1,30 @@
 .cart-dropdown {
+  background: linear-gradient(123deg, black, rgb(41, 33, 33));
     position: absolute;
     width: 240px;
     height: 340px;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    border: 1px solid black;
-    background-color: white;
+    color: white;
+    border-bottom: 5px solid red;
+    border-bottom-left-radius: 50px;
     top: 90px;
     right: 40px;
     z-index: 5;
+
+    @media (max-width: 500px) {
+       width: 120px;
+       height: 150px;
+    }
   
     .cart-items {
       height: 240px;
       display: flex;
       flex-direction: column;
-      overflow-y: scroll;
+      overflow: none;
+
+    
     }
     .empty-message {
       font-size: 20px;
@@ -25,8 +34,24 @@
     }
   
     button {
-      margin-top: auto;
+      border-radius: 20px 20px;
+      margin-top:90px;
+      &:hover{
+        color: white;
+      }
+      @media (max-width: 500px) {
+        width: 30px;
+        height: 20px;
+        margin: 0%;
+        padding: 0%;
+        font-size: 10px;
+        
+     }
     }
+    @media (max-width: 500px) {
+      width: 157px;
+      height: 250px;
+   }
     
   }
   

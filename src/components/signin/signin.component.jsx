@@ -29,11 +29,12 @@ class Signin extends React.Component {
   render() {
     return (
       <div className="sign-in">
-        <h2 className="title">i already have an account</h2>
+        <h2 className="title" >i already have an account</h2>
         <span>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit}>
           <Form
+        
             type="email"
             label="email"
             name="email"
@@ -42,6 +43,7 @@ class Signin extends React.Component {
             required
           />
           <Form
+         
         
             type="password"
             name="password"

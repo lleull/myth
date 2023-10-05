@@ -1,5 +1,7 @@
+
+
 .collection-item {
-  width: 22%;
+  width: 22vw;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -49,7 +51,13 @@
     }
 
     .price {
+      justify-content: center;
+      align-items: center;
+      display: flex;
       width: 10%;
+      background-color: white;
+      padding: 1px;
+      color: black;
     }
   }
 }

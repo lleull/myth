@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 
 
-const CartDropDown = ({ cartItems, history, }) => (
+const CartDropDown = ({ cartItems, history }) => (
 
 
   <div className="cart-dropdown">
@@ -21,7 +21,7 @@ const CartDropDown = ({ cartItems, history, }) => (
       {cartItems.length ? (
         cartItems.map((cartItem) => <CartItem key={cartItem.id} item={cartItem} />)
       ) : (
-        <span className="empty-message">Shopping CART is Empty</span>
+        <span className="empty-message"> CART is Empty</span>
       )}
     </div>
     <Link to="/checkout">
