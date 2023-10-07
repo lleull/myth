@@ -13,10 +13,16 @@ import { SelectCurrentUser } from './redux/user/user.selector';
 import { createStructuredSelector } from 'reselect';
 import Contact from './components/contact/contact';
 import selectCollections from './redux/shop/shop.selector';
+import MainAppp from './components/newfile/main';
+
+ 
 
 class  App extends React.Component {
  
-      
+  state = {
+    loading: true
+  }  
+   
   
 unsubscriberFromAuth = null;
 
@@ -48,6 +54,7 @@ componentDidMount() {
         <Header />
         <Routes>
         <Route  path='/contact' Component={Contact} />  
+        <Route  path='/Mount' Component={MainAppp}  />
             <Route  path='/' Component={Homepage}  />
             <Route  path='/shop' Component={Shop} />
             <Route exact path='/signin' element={this.props.currentUser ? (

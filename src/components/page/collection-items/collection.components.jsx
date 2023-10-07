@@ -3,7 +3,7 @@ import "./collection-item.styles.scss";
 
 import { connect } from "react-redux";
 import { addItem } from "../../../redux/Cart/cart.action";
-import { AddCart } from "./newbu";
+
 
 const CollectionItem = ({  addItem, item }) => {
   const { name, imageUrl, price} = item;
@@ -11,7 +11,7 @@ const CollectionItem = ({  addItem, item }) => {
   return (
   <div className="collection-item">
     <div className="image" style={{ backgroundImage: `Url(${imageUrl})` }} />
-    <AddCart onClick={() => addItem(item)} >Add Cart</AddCart>
+    <div className="custom-button" onClick={() => addItem(item)} >Add Cart</div>
     <div className="collection-footer">
       <span className="name">{name}</span>
       <span className="price">{price}</span>

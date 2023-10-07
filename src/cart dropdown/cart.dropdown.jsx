@@ -24,11 +24,14 @@ const CartDropDown = ({ cartItems, history }) => (
         <span className="empty-message"> CART is Empty</span>
       )}
     </div>
+      
+    <div className="check">
     <Link to="/checkout">
-    <CustomButton >GO CHECKOUT</CustomButton>
-    </Link>
-
+   <CustomButton >GO CHECKOUT</CustomButton>
+   </Link>
+    </div>
   </div>
+   
 );
 
 
