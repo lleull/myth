@@ -20,4 +20,7 @@ export const addItem = item => ({
     payload: item
  })
 
+ export const clearCart= () => ({
+    type: CardActionTypes.CLEAR_CART
+ })
 export default ToggleCardHidden(addItem)

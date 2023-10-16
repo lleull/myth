@@ -1,46 +1,85 @@
 .header {
-   height: 80px;
+  background: linear-gradient(120deg, rgb(92, 91, 90), rgba(252, 252, 252, 0.507));
+  padding: 4px 0px;
+   height: 40px;
     width: 100%;
+    border: none;
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+
+
+    @media (max-width: 800px) {
+       background: none;
+       margin: 0 ;
+       padding: 0;
+       display: flex;
+       flex-wrap: wrap;
+}
   
    
     .logo-container {
       height: 100%;
-      width: 40px;
-     }
+      width: 80px;
+     display: flex;
+     flex-direction: row;
+      border: 2px solid red;
 
   
+     }
+     
+     @media (max-width: 800px) {
+      display: flex;
+      justify-content: center;
+   }
+  
     .options {
-    
+    margin: 0 13px;
       text-decoration: none;
       font-size: 22px;
       color: rgb(7, 0, 0);
       gap: 10px;
+      font-weight: 500;
       justify-content: flex-end;
       display: flex;
+
       align-items: center;
-      color: white;
-    
       cursor: pointer;
 
+
+      .button{
+        width: 36px;
+        height: 50px;
+        display: none;
+        border-radius: 30%;
+        background-color: red;
+
+        @media (max-width: 700px) {
+          display: flex;
+          width: 36px;
+          height: 50px;
+        border-radius: 30%;
+           background-color: red;
+         
+        
+        }
+
+
+      }
+      
+      
+     
+
+
+     
       &:hover{
            color: black;
       }
-       @media (max-width: 600px) {
-         color: white;
-         display: flex;
-        font-size: 15px;
-         gap: 5px;
-         font-weight: 900;
-         font-family: monospace;
-       }
-    
+      
   
       .option {
         text-decoration: none;
-        font-size: 22px;
+        font-size: 18px;
       color: rgb(255, 255, 255);
   
       font-family: monospace;
@@ -56,7 +95,7 @@
       }
       .no{
         text-decoration: none;
-        font-size: 22px;
+        font-size: 18px;
       color: rgb(255, 255, 255);
   
       font-family: monospace;
@@ -69,6 +108,7 @@
      border: 2px solid rebeccapurple;
       cursor: pointer;
         padding: 10px 15px;
+
        
       }
     }

@@ -22,7 +22,7 @@ const WithData = (WrappedComponent, DataSource) => {
           }
           render() {
             return this.state.data.length < 1 ? (
-                <h1>LOAD..</h1>
+                <h1 style={{color: "white"}}>LOAD..</h1>
 
             ):(
            

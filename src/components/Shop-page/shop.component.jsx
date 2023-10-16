@@ -1,36 +1,28 @@
-import React from "react";
+import React, {useEffect} from "react";
 import CollectionOverview from "../../components/collection overview/collection.overview";
-import { fetchCollectionStartAync } from "../../redux/shop/shop.action";
+// import { fetchCollectionStartAync } from "../../redux/shop/shop.action";
 import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import { selectCollectionisFetching } from "../../redux/shop/shop.selector";
+import { fetchCollectionStart } from "../../redux/shop/shop.action";
+
+const  Shop = ({fetchCollectionStart}) => {
+  useEffect(() => {
+    fetchCollectionStart()
+  },[fetchCollectionStart])
 
 
-class Shop extends React.Component {
-
-  componentDidMount() {
-  const {fetchCollectionStartAync} = this.props
-  fetchCollectionStartAync()
-  }
   
-
-  render()  {
-    const {isFetching} = this.props
     return (
       <div>
-        <CollectionOverview colletions={isFetching}   />
+        <CollectionOverview isfetching={fetchCollectionStart}  />
       </div>
     );
   }
-}
 
-const mapStateToProps =  createStructuredSelector({
-  isFetching : selectCollectionisFetching
-})
+
+
 
 const mapDispatchToProps = dispatch => ({
-  fetchCollectionStartAync: () => dispatch(fetchCollectionStartAync())
-})
+  fetchCollectionStart: () => dispatch(fetchCollectionStart()),
+});
 
-
-export default connect(mapStateToProps ,mapDispatchToProps)(Shop);
+export default connect(null, mapDispatchToProps)(Shop);

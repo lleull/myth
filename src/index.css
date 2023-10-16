@@ -2,13 +2,20 @@ body {
   padding: 20px 50px;
   box-sizing: border-box;
   margin: 0;
-  background: linear-gradient(100deg, rgb(92, 91, 90), rgb(48, 38, 192));
+  background: linear-gradient(120deg, #6d5656, #fcfcfc);
+ 
+
   
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 700px) {
+    background: linear-gradient(200deg, rgb(56, 55, 55), rgb(228, 160, 160));
+    
+  }
 }
 
 code {
