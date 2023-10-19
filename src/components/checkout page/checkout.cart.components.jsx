@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./checkout.scss";
-import {connect} from 'react-redux'
-import { createStructuredSelector } from "reselect";
-import { selectCartItems, selectCardTotal } from "../redux/Cart/cart.selector";
-import CheckoutItem from "../checkout-items/checkout-items.component";
-import { withRouter } from "../components/menu-item/menu-item.component";
-
-import StripeCheckoutButton from "../assests/stripe/stripe-button.componenet";
+import { selectCartItems, selectCardTotal } from "../../redux/Cart/cart.selector";
+import CheckoutItem from "../../checkout-items/checkout-items.component";
+import { useSelector } from "react-redux/es/hooks/useSelector";
+import StripeCheckoutButton from "../../assests/stripe/stripe-button.componenet";
 
 
- const Checkout = ({CartItems, Total}) => (
+ const Checkout = () => {
+const CartItems = useSelector(selectCartItems)
+const Total = useSelector(selectCardTotal)
+
+useEffect(() => {
+  CartItems()
+  Total()
+},[CartItems, Total ])
+
+  return(
 
     <div className="checkout-page">
       <div className="checkout-header">
@@ -45,15 +51,15 @@ import StripeCheckoutButton from "../assests/stripe/stripe-button.componenet";
         </div>
         <StripeCheckoutButton price={Total} />
     </div>
-
 )
+    }
 
 
-const mapStateToProps = createStructuredSelector ({
-    CartItems: selectCartItems,
-    Total: selectCardTotal
+// const mapStateToProps = createStructuredSelector ({
+//     CartItems: selectCartItems,
+//     Total: selectCardTotal
   
-})
+// })
 
 
-export default withRouter(connect(mapStateToProps)(Checkout));
+export default Checkout;

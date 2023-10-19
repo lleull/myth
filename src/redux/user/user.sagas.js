@@ -9,6 +9,7 @@ import { SignInFailure,
 
 
 
+
 export function* signOut() {
 try {
   yield auth.signOut()
@@ -29,6 +30,8 @@ try {
   yield put(SignInFailure(error))
 }
 }
+
+
 
 export function* snapShotUserRef (userAuth, additionalData) {
 try{
